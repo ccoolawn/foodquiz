@@ -1,0 +1,53 @@
+[
+	{
+		"question" : "Pinot Noir is from the __________ region in France.",
+		"answers" : [
+			{"id" : 0, "text" : "Languedoc"},
+			{"id" : 1, "text" : "Bordeaux"},
+			{"id" : 2, "text" : "Burgundy"},
+			{"id" : 3, "text" : "Provence"}
+		],
+		"correct" : 2
+	},
+		{
+		"question" : "Which image shows a close-up of a Seared Duck Breast?",
+		"answers"  : [
+			{"id"  : 0, "image" : "images/closeup_1.jpg" },
+			{"id"  : 1, "image" : "images/closeup_2.jpg" },
+			{"id"  : 2, "image" : "images/closeup_3.jpg" },
+			{"id"  : 3, "image" : "images/closeup_4.jpg" }
+		],
+		"correct"  : 1
+	},
+	{
+		"question" : "For a brandy to bear the name Cognac how many years should it be aged in French oak barrels from Limousin or Tronçais?",
+		"answers"  : [
+			{"id"  : 0, "text" : "12"},
+			{"id"  : 1, "text" : "6"},
+			{"id"  : 2, "text" : "29"},
+			{"id"  : 3, "text" : "2"}
+		],
+		"correct"  : 3
+	},
+	{
+		"question" : "Which grape is primarily grown for blending?",
+		"answers"  : [
+			{"id"  : 0, "text" : "Cabernet Sauvignon"},
+			{"id"  : 1, "text" : "Merlot"},
+			{"id"  : 2, "text" : "Carménère"},
+			{"id"  : 3, "text" : "Syrah"},
+			{"id"  : 4, "text" : "Cabernet Franc"},
+			{"id"  : 5, "text" : "Viognier"}
+		],
+		"correct"  : 4,
+		"feedback" : "Cabernet Franc is one of two parents of Cabernet Sauvignon, Merlot, and Carménère."
+	},
+	{
+		"question" : "Halibut is related to Turbot",
+		"answers"  : [
+			{"id"  : 0, "text" : "True"},
+			{"id"  : 1, "text" : "False"}
+		],
+		"correct"  : 0
+	}
+]

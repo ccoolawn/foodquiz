@@ -1,0 +1,216 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel)
+@import url(https://fonts.googleapis.com/css?family=Quattrocento)
+@import "tools/normalize"
+
+body
+	background-color: black
+	padding: 20px
+
+#myQuiz
+	font-family: 'Cinzel', serif
+	font-size: 16px
+	font-weight: 400
+	width: 650px
+	height: 650px
+	position: relative
+	overflow: hidden
+	color: #fff
+	background: #000 url(../images/background2.jpg) no-repeat 0px 0px
+
+	h1
+		font-weight: 100
+		font-size: 2em
+		text-transform: uppercase
+		margin: 0px
+		position: absolute
+		top: 25px
+		left: 36px
+
+		span
+			display: block
+			font-weight: 900
+			font-family: Quattrocento
+			font-size: 3.2em
+			line-height: 65px
+
+	h2
+		font-size: 3em
+		margin: 0px
+		font-weight: 100
+
+	h3
+		font-size: 2.4em
+		margin: 0px
+		font-weight: 100
+
+	p
+		margin: 0px 0px 14px 0px
+
+	.btn
+		display: inline-block
+		cursor: pointer
+		background-color: #281A06
+		color: #fff
+		text-decoration: none
+		padding: 5px 15px
+		border-radius: 6px
+
+	.intro
+		position: absolute
+		top: 225px
+		left: 660px
+		width: 550px
+
+		p
+			margin: 0px 0px 40px 0px
+
+	.progress
+		width: 550px
+		position: absolute
+		top: 160px
+		left: 40px
+
+		div
+			position: relative
+			display: inline-block
+			width: 30px
+			height: 30px
+			margin-right: 30px
+			border-radius: 50%
+			background-image: url(../images/fork.svg)
+			background-repeat: no-repeat
+			background-position: 0px 0px
+			background-size: 30px 30px
+			background-color: rgba(0, 0, 0, 0.0)
+			transition: background-color 1s
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				top: -60px
+				left: -1px
+				width: 65px
+				height: 40px
+				background: url(../images/briecheese.svg) no-repeat 0px 0px
+				background-size: 30px 30px
+				transition: opacity 1s, top 1s
+				opacity: 0
+
+		div.on, div.answered
+			background-color: rgba(114, 67, 27, 0.8)
+
+		div.correct
+			&::after
+				top: -20px
+				opacity: 1
+
+	.question
+		width: 550px
+		position: absolute
+		top: 225px
+		left: 660px
+
+		.txt
+			font-size: 1.6em
+			margin: 0px 0px 20px 0px
+
+		.ans
+			display: inline-block
+			font-size: 1.1em
+			width: 225px
+			border: 2px solid rgba(172,46,32, 0.4)
+			border-radius: 6px
+			padding: 10px
+			margin: 0px 15px 15px 0px
+			position: relative
+			background-color: rgba(0, 0, 0, 0.7)
+			&::after
+				content: ''
+				display: block
+				width: 20px
+				height: 20px
+				background: no-repeat 0px 0px
+				background-size: 20px 20px
+				position: absolute
+				top: 5px
+				right: 5px
+
+		.ans.selected
+			border-color: gold
+			&::after
+				background-image: url(../images/icon_incorrect.svg)
+
+		.ans.correct
+			border-color: green
+			&::after
+				background-image: url(../images/icon_correct.svg)
+
+		.ans.image
+			min-height: 60px
+			padding: 0px
+			background-repeat: no-repeat
+			background-position: 0px 0px
+
+	.question.unanswered .ans
+		cursor: pointer
+		&:hover
+			background-color: rgba(238,189,102, 0.3)
+
+	.question.answered .ans
+		cursor: default
+
+	.feedback
+		color: #F3E9A9
+		font-weight: 700
+		margin-top: 10px
+		transition: opacity 1.5s, margin-top 1.5s
+		visibility: hidden
+		opacity: 0
+
+		.btn
+			margin-top: 5px
+
+		strong
+			color: white
+
+		.xtrfback
+			color: #281A06
+
+	.answered
+		.feedback
+			visibility: visible
+			opacity: 1
+			margin-top: 10px
+
+	.results
+		position: absolute
+		top: 225px
+		left: 660px
+		width: 550px
+
+		.share
+			margin-top: 40px
+
+			a.btn
+				margin-right: 20px
+				padding: 9px 15px 8px 42px
+				background-repeat: no-repeat
+				background-position: 10px 5px
+				background-size: 25px 25px
+
+			a.btn.email
+				background-image: url(../images/icon_email.svg)
+
+			a.btn.twitter
+				background-color: rgba(28,159,239, 0.7)
+				background-image: url(../images/icon_twitter.svg)
+
+	.active, .inactive
+		transition: left 1.5s ease-in-out
+
+	.active
+		left: 40px
+
+	.intro.inactive,.inactive.answered
+		left: -1350px
+
